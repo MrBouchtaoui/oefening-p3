@@ -1,32 +1,50 @@
 console.log("It works...");
 
-//1
-let firstName;
-let lastName;
-let education;
-
-// 4
-let save;
-let firstNameInput;
-let lastNameInput;
-let educationInput;
-let outputDiv;
-let reset;
-let totalDiv;
-
-//reset.style.background = "red";
-
-let persons = [];
-
-save.addEventListener("click", function () {});
-
-reset.addEventListener("click", function () {
-	outputDiv.innerHTML = "";
-});
-
-function resultfunc(a, b) {
-	let result = a + b;
-	return result;
+// Opdr. 1
+let x = 5;
+if (x > 5.4) {
+	console.log("Je hebt een voldoende");
+} else {
+	console.log("Je hebt een ONvoldoende");
 }
 
-console.log(resultfunc(2, 5));
+// Opdr. 2
+let cars = ["Mercedes", "Tesla", "Peugeot", "Volkswagen", "Kia"];
+for (let a = 0; a < cars.length; a++) {
+	const car = cars[a];
+	console.log(car);
+}
+
+// 3
+let save = document.querySelector(".save");
+let firstNameInput = document.querySelector(".first-name");
+
+save.addEventListener("click", function (event) {
+	let firstName = firstNameInput.value;
+
+	if (firstName === "") {
+		firstNameInput.classList.add("error");
+	} else {
+		firstNameInput.classList.remove("error");
+	}
+});
+
+// opdr. 4
+
+let vehicles = [
+	{
+		brand: "Mercedes",
+		model: "C class",
+		buildYear: 2003,
+	},
+	{
+		brand: "Volkswagen",
+		model: "Golf 8",
+		buildYear: 2022,
+	},
+];
+
+for (let z = 0; z < vehicles.length; z++) {
+	const car = vehicles[z];
+	console.log(car);
+}
